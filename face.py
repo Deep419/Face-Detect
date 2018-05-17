@@ -208,8 +208,8 @@ if __name__ == '__main__':
 
   print '\n\nLoaded network {:s}'.format(caffemodel)
 
-  config = tf.ConfigProto(device_count = {'GPU': 1})
-  sess = tf.Session(config=config) #Launch the graph in a session.
+  #config = tf.ConfigProto(device_count = {'CPU': 0})
+  sess = tf.Session() #Launch the graph in a session.
   my_head_pose_estimator = CnnHeadPoseEstimator(sess) #Head pose estimation object
   # Load the weights from the configuration folders
   
@@ -247,9 +247,9 @@ if __name__ == '__main__':
 
   print '\n\n11AFTER SESSION\n\n'
   # Warmup on a dummy image
-  im = 128 * np.ones((300, 500, 3), dtype=np.uint8)
-  for i in xrange(2):
-    _, _= im_detect(net, im)
+  #im = 128 * np.ones((300, 500, 3), dtype=np.uint8)
+  #for i in xrange(2):
+  #  _, _= im_detect(net, im)
   print '\n\n22AFTER SESSION\n\n'
   #nfold = len(imdb)
 

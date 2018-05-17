@@ -4,9 +4,9 @@
 # ===== PBS OPTIONS =====
 #
 #PBS -N "face_vid"
-#PBS -q titan
+#PBS -q copperhead
 #PBS -l walltime=400:00:00
-#PBS -l nodes=1:ppn=1:gpus=2,mem=16GB
+#PBS -l nodes=1:ppn=1:gpus=1,mem=16GB
 #PBS -V
 #
 # ===== END PBS OPTIONS =====
